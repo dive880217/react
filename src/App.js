@@ -7,6 +7,8 @@
 // import { a, foo } from './ModuleA'
 // import bar from './ModuleB'
 // import koo, { o, b } from './ModuleC'
+// 導入 koo function ,隔開 {裡面放宣告的變數}
+// 但也可以在{裡面放func}
 
 // function App() {
 //   const [total, setTotal] = useState(0)
@@ -116,12 +118,55 @@
 
 // =============================================
 
-import Menu from './homework/Menu'
+// import Menu from './homework/Menu'
+
+// function App() {
+//   return (
+//     <>
+//       <Menu />
+//     </>
+//   )
+// }
+
+// export default App
+
+//=========================================
+
+// import Todo from './ex-0819-2/Todo'
+
+// function App() {
+//   return (
+//     <>
+//       <Todo />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+// import Child from './ex-0819-3/Child'
+// import Parent from './ex-0819-3/Parent'
+
+// function App() {
+//   return (
+//     <>
+//       {/* <Child /> */}
+//       <Parent />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+import Parent from './ex-0819-4/Parent'
 
 function App() {
   return (
     <>
-      <Menu />
+ 
+      <Parent />
     </>
   )
 }

@@ -1,5 +1,5 @@
 export default function koo() {
-    console.log(1)
+  console.log(1)
 }
 
 //通常都用預設的函數庫
