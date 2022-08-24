@@ -7,8 +7,16 @@ function Controlled(props) {
   const [textArea, setTextArea] = useState('')
 
   // radio
-  const [gender, setGender] = useState('女')
+  const [gender, setGender] = useState('')
   const genderOptions = ['男', '女', '不提供']
+
+  // select
+  const [pet, setPet] = useState('')
+  const petOptions = ['狗', '貓', '金魚']
+
+  // checkbox group
+  const [likeList, setLikeList] = useState([])
+  const fruitOptions = ['芒果', '蘋果', '香蕉']
 
   return (
     <>
@@ -56,6 +64,48 @@ function Controlled(props) {
                 value={v}
                 onChange={(e) => {
                   setGender(e.target.value)
+                }}
+              />
+              <label>{v}</label>
+            </div>
+          )
+        })}
+      </section>
+      <section id="select">
+        <h2>下拉選單(select)</h2>
+        <label>選擇寵物</label>
+        <select
+          value={pet}
+          onChange={(e) => {
+            setPet(e.target.value)
+          }}
+        >
+          <option value="">--請選擇--</option>
+          {petOptions.map((v, i) => {
+            return <option value={v}>{v}</option>
+          })}
+        </select>
+      </section>
+      <section id="checkbox">
+        <h2>核取方塊(checkbox)</h2>
+        {fruitOptions.map((v, i) => {
+          return (
+            <div key={i}>
+              <input
+                type="checkbox"
+                value={v}
+                checked={likeList.includes(v)}
+                onChange={(e) => {
+                  const value = e.target.value
+
+                  if (likeList.includes(value)) {
+                    // 如果此項目在state陣列中 -> 移出此陣列
+                    // 回傳一個沒有此項目的新state陣列
+                    setLikeList(likeList.filter((v) => v !== value))
+                  } else {
+                    // 如果此項目不在state陣列中 -> 加入此陣列
+                    setLikeList([...likeList, value])
+                  }
                 }}
               />
               <label>{v}</label>

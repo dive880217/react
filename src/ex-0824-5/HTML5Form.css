@@ -1,0 +1,16 @@
+/* 合法 樣式 */
+input:valid {
+    border-color: aqua;
+    background-color: azure;
+}
+
+/* 不合法 樣式 */
+input:invalid {
+    border-color: red;
+    background-color: darkgray;
+}
+
+.error {
+    font-size: 10px;
+    color: red;
+}

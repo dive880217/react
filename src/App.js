@@ -230,12 +230,79 @@
 // export default App
 //========================================
 
-import Controlled from './ex-0822-4/Controlled'
+// import Controlled from './ex-0822-4/Controlled'
 
+// function App() {
+//   return (
+//     <>
+//       <Controlled />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+
+// import Controlled from './ex-0824-1/Controlled'
+
+// function App() {
+//   return (
+//     <>
+//       <Controlled />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+
+// import BirthSelect from './ex-0824-2/BirthSelect'
+
+// function App() {
+//   return (
+//     <>
+//       <BirthSelect />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+// import BMI from './ex-0824-3/BMI'
+
+// function App() {
+//   return (
+//     <>
+//       <BMI />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+
+// import MultipleInput from './ex-0824-4/MultipleInput'
+
+// function App() {
+//   return (
+//     <>
+//       <MultipleInput />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+import HTML5Form from './ex-0824-5/HTML5Form'
 function App() {
   return (
     <>
-      <Controlled />
+      <HTML5Form />
     </>
   )
 }
