@@ -298,11 +298,74 @@
 // export default App
 
 //========================================
-import HTML5Form from './ex-0824-5/HTML5Form'
+// import HTML5Form from './ex-0824-5/HTML5Form'
+// function App() {
+//   return (
+//     <>
+//       <HTML5Form />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+// import RefsForm from './ex-0825-1/RefsForm'
+// import IdForm from './ex-0825-1/IdForm'
+// function App() {
+//   return (
+//     <>
+//       <IdForm />
+//       <RefsForm />
+//     </>
+//   )
+// }
+
+// export default App
+//========================================
+// import FCLifecycle from './ex-0825-2/FCLifecycle'
+
+// import { useState } from 'react'
+
+// function App() {
+//   const [show, setShow] = useState(true)
+
+//   return (
+//     <>
+//       {show && <FCLifecycle />}
+//       <button
+//         onClick={() => {
+//           setShow(!show)
+//         }}
+//       >
+//         {show ? '移除' : '呈現'}
+//       </button>
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+// import UserList from './ex-0825-3/UserList'
+// function App() {
+//   return (
+//     <>
+//       <UserList />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+
+import UserList from './ex-0825-4/UserList'
+
 function App() {
   return (
     <>
-      <HTML5Form />
+      <UserList />
     </>
   )
 }
