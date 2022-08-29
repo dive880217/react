@@ -360,13 +360,91 @@
 
 //========================================
 
-import UserList from './ex-0825-4/UserList'
+// import UserList from './ex-0825-4/UserList'
+
+// function App() {
+//   return (
+//     <>
+//       <UserList />
+//     </>
+//   )
+// }
+
+// export default App
+//========================================
+
+// import BSCollapse from './ex-0829-1/BSCollapse'
+
+// function App() {
+//   return (
+//     <>
+//       <BSCollapse />
+//     </>
+//   )
+// }
+
+// export default App
+//========================================
+
+// import BSCollapse from './ex-0829-1/BSCollapse'
+// import BSModal from './ex-0829-1/BSModal'
+
+// function App() {
+//   return (
+//     <>
+//       {/* <BSCollapse /> */}
+//       <BSModal />
+//     </>
+//   )
+// }
+
+// export default App
+
+//========================================
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { AuthProvider } from './utils/use-auth'
+import React from 'react'
+
+// 引入頁面元件
+import About from './pages/About'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import NotFound from './pages/NotFound'
+import Product from './pages/Product'
+import ProductMenSummer from './pages/ProductMenSummer'
+import User from './pages/User'
 
 function App() {
   return (
-    <>
-      <UserList />
-    </>
+    <BrowserRouter>
+      {/* 會員認証用Context提供者(auth, setAuth) */}
+      <AuthProvider>
+        {/* 連結到各頁面連結 */}
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="about">About</Link>
+        <br />
+        <Link to="product">Product</Link>
+        <br />
+        <Link to="product/men/summer">Product-Men-Summer</Link>
+        <br />
+        <Link to="User">User</Link>
+        <br />
+        <Link to="login">Login</Link>
+        <hr />
+
+        {/* 路由表 */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="product/men/summer" element={<ProductMenSummer />} />
+          <Route path="product" element={<Product />} />
+          <Route path="User" element={<User />} />
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
   )
 }
 
